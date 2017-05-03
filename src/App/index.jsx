@@ -10,7 +10,7 @@ class App extends Component {
       <div>
         <MainBlock />
         <SideBlock />
-        <HeaderBar />
+        <HeaderBar title="US Military Collection" />
       </div>
     );
   }

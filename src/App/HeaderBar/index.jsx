@@ -1,12 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import './HeaderBar.css';
 
-class App extends Component {
+class HeaderBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      path: ['Home', 'Search', 'US Military Collection'],
+      title: 'US Military Collection',
+    };
+  }
   render() {
     return (
-      <div />
+      <div className="headerBar">
+        <div className="pathContainer">{this.state.path.map((step, index) => <div key={`${index + step}`} className="pathStep">{`${step} >`}</div>)}</div>
+        <div className="headerBarTitleContainer"><div className="headerBarTitle">{this.props.title}</div></div>
+      </div>
     );
   }
 }
 
-export default App;
+export default HeaderBar;
+
+HeaderBar.propTypes = {
+  title: PropTypes.string,
+};

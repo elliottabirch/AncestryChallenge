@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import MainBlock from './MainBlock';
-import SideBlock from './SideBlock';
+
 import HeaderBar from './HeaderBar';
+import CollectionPage from './CollectionPage';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <MainBlock />
-        <SideBlock />
         <HeaderBar title="US Military Collection" />
+        <CollectionPage />
       </div>
     );
   }

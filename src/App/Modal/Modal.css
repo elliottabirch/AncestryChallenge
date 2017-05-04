@@ -1,6 +1,5 @@
 .modalDialog {
-background-color: #fefefe;
-  background: #fefefe;
+background-color: #FFFFFF;
   border: gray solid 1px;
   border-radius: 5px;
   margin-left: -200px;
@@ -10,15 +9,18 @@ background-color: #fefefe;
   left: 50%;  
   z-index: 11; 
   width: 360px;
-  
 }
 
 .modalDialogTitle {
-  background-color: lightgray;
+  color: #6A6661;
+  font-size: 14px;
+  top: 0px;
+  margin: 5px;
+  padding-left: 5px;
 }
 
 .modalDialogBody {
- background-color: gray;
+ background-color: #F9F7F3
 }
 
 .background {
@@ -32,4 +34,9 @@ background-color: #fefefe;
 
 .modal {
   display: block;
+}
+.modalDialogCloseButton {
+  left: calc(100% - 11px);
+  top: -11px;
+  position:absolute;
 }

@@ -1,3 +1,11 @@
-.sideblock {
+.sideBlockContainer {
   flex: 1;
+  display: flex;
+  flex-wrap: true;
+  flex-direction: column
+}
+
+.sideBlock {
+  width: 100%;
+  overflow-x: hidden;
 }

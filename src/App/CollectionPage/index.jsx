@@ -16,8 +16,10 @@ class CollectionPage extends Component {
   render() {
     return (
       <div className="collectionPage">
-        <MainBlock title={this.state.title} blurbs={this.state.blurbs} pictureURL={this.state.pictureURL} />
-        <SideBlock />
+        <div className="content">
+          <MainBlock title={this.state.title} blurbs={this.state.blurbs} pictureURL={this.state.pictureURL} />
+          <SideBlock />
+        </div>
       </div>
     );
   }

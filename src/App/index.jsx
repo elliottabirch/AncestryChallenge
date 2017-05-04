@@ -7,7 +7,7 @@ import CollectionPage from './CollectionPage';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="App">
         <HeaderBar title="US Military Collection" />
         <CollectionPage />
       </div>

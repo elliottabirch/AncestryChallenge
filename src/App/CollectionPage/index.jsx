@@ -44,12 +44,12 @@ class CollectionPage extends Component {
           <MainBlock title={this.state.title} blurbs={this.state.blurbs} pictureURL={this.state.pictureURL} />
           <SideBlock>
             <CollectionBlock collection={this.state.collection} title="Featured Collections" />
-            <SubscribeBlock body={this.state.subscribeBlockBody} title="Let us help you discover your story" subscibeClick={this.toggleModal} />
+            <SubscribeBlock body={this.state.subscribeBlockBody} title="Let us help you discover your story" onSubscribeClick={this.toggleModal} />
           </SideBlock>
         </div>
-        <Modal title="Subscribe Today">
+        {this.state.modalIsShowing && <Modal title="Subscribe Today" onCloseClick={this.toggleModal}>
           <SubscribeForm />
-        </Modal>
+        </Modal>}
       </div>
     );
   }

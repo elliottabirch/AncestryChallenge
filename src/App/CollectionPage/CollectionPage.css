@@ -1,10 +1,10 @@
 .collectionPage {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .content {
   display: flex;
-  width: 80%;
-  
+  width: 750px;
 }

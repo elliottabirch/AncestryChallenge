@@ -1,11 +1,12 @@
 .sideBlockContainer {
-  flex: 1;
   display: flex;
+  flex: 1;
   flex-wrap: true;
-  flex-direction: column
+  flex-direction: column;
+  width: 250px;
+  overFlow-x: hidden;
 }
 
 .sideBlock {
-  width: 100%;
   overflow-x: hidden;
 }

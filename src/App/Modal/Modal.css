@@ -1,4 +1,4 @@
-.modal-dialog {
+.modalDialog {
 background-color: #fefefe;
   background: #fefefe;
   border: gray solid 1px;
@@ -11,6 +11,14 @@ background-color: #fefefe;
   z-index: 11; 
   width: 360px;
   
+}
+
+.modalDialogTitle {
+  background-color: lightgray;
+}
+
+.modalDialogBody {
+ background-color: gray;
 }
 
 .background {

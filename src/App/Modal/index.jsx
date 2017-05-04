@@ -4,12 +4,14 @@ import './Modal.css';
 const Modal = props => (
   <div className="modal">
     <div className="background" />
-    <div className="modal-dialog">
-      {props.children}
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
-      <div>hello</div>
+    <div className="modalDialog">
+      <button onClick={() => props.onCloseClick()} className="modalDialogCloseButton">x</button>
+      <div className="modalDialogTitle">
+        <h3>{props.title}</h3>
+      </div>
+      <div className="modalDialogBody">
+        {props.children}
+      </div>
     </div>
   </div>
   );

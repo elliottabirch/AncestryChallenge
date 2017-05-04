@@ -5,6 +5,7 @@ import SideBlock from './SideBlock';
 import HeaderBar from './HeaderBar';
 import SubscribeBlock from './Blocks/SubscribeBlock';
 import CollectionBlock from './Blocks/CollectionBlock';
+import SubscribeForm from '../SubscribeForm';
 import Modal from '../Modal';
 
 class CollectionPage extends Component {
@@ -46,6 +47,9 @@ class CollectionPage extends Component {
             <SubscribeBlock body={this.state.subscribeBlockBody} title="Let us help you discover your story" subscibeClick={this.toggleModal} />
           </SideBlock>
         </div>
+        <Modal title="Subscribe Today">
+          <SubscribeForm />
+        </Modal>
       </div>
     );
   }

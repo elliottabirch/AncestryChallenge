@@ -5,8 +5,15 @@
   flex-direction: column;
   width: 250px;
   overFlow-x: hidden;
+  padding: 0 2px;
+  margin: 10px 0px;;
 }
 
 .sideBlock {
   overflow-x: hidden;
+  
+}
+
+.sideBlockContainer > * {
+  margin: 5px 0;
 }

@@ -4,10 +4,10 @@ import './SubscribeBlock.css';
 
 
 const SubscribeBlock = props => (
-  <div>
-    <h3>{props.title}</h3>
+  <div className="subscribeBlock">
+    <div className="subscribeBlockTitle">{props.title}</div>
     <p>{props.body}</p>
-    <button onClick={() =>
+    <button className="subscribeButton" onClick={() =>
       props.onSubscribeClick()
       }
     >SUBSCRIBE TODAY</button>

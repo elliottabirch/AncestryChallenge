@@ -11,12 +11,15 @@ class SubscribeForm extends Component {
       showFirstNameError: false,
       showLastNameError: false,
       showEmailerror: false,
+      firstNameClass: '',
+      lastNameClass: '',
+      emailClass: '',
     };
-    this.createErrorMessage = noun => `You didn't input a ${noun}`;
     this.validateEmailString = function (email) {
       const re = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
       return re.test(email);
     };
+    this.warning = () => ([<svg width="12px" height="11px" viewBox="0 0 12 11"><g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd"><path d="M5.5178527,0 L11.1028388,10.572042 L0,10.5661402 L5.5178527,0 Z M5.01984563,2.5 L5.01984563,6.70281972 L6.01984563,6.70281972 L6.01984563,2.5 L5.01984563,2.5 Z M6.03443987,9.11619379 L6.03443987,8.05396998 L5.03443987,8.05396998 L5.03443987,9.11619379 L6.03443987,9.11619379 Z" id="Combined-Shape" fill="#F4392C" /></g></svg>]);
   }
 
   setProperty(property, e) {
@@ -33,19 +36,21 @@ class SubscribeForm extends Component {
   }
 
   validateForm(firstName, lastName, email) {
-    this.validateName('showFirstNameError', firstName);
-    this.validateName('showLastNameError', lastName);
+    this.validateName('showFirstNameError', 'firstNameClass', firstName);
+    this.validateName('showLastNameError', 'lastNameClass', lastName);
     this.validateEmail(email);
     return this.validateName('showFirstNameError', firstName) && this.validateName('showLastNameError', lastName) && this.validateEmail(email);
   }
-  validateName(property, name) {
+  validateName(property, classProperty, name) {
     const newState = {};
     if (!name) {
       newState[property] = true;
+      newState[classProperty] = 'warning';
       this.setState(newState);
       return false;
     }
     newState[property] = false;
+    newState[classProperty] = '';
     this.setState(newState);
     return true;
   }
@@ -54,11 +59,13 @@ class SubscribeForm extends Component {
     if (!this.validateEmailString(email)) {
       this.setState({
         showEmailerror: true,
+        emailClass: 'warning',
       });
       return false;
     }
     this.setState({
       showEmailerror: false,
+      emailClass: '',
     });
     return true;
   }
@@ -67,16 +74,16 @@ class SubscribeForm extends Component {
     return (
       <div className="subscribeFormContainer">
         <form className="subscribeForm" action="" onSubmit={e => this.submitNewUser(this.state.firstName, this.state.lastName, this.state.email, e)}>
-          <div className="nameInputContainer">
-            <label>Your first name</label> {this.state.showFirstNameError && <span className="errorMessage">{this.createErrorMessage('first name')}</span>}
+          <div className={`nameInputContainer ${this.state.firstNameClass}`}>
+            <label>Your first name</label> {this.state.showFirstNameError && <span className="errorMessage">Required</span>}
             <input type="text" className="nameInput" label="firstName" onChange={e => this.setProperty('firstName', e)} />
           </div>
-          <div className="nameInputContainer">
-            <label>Your last name</label> {this.state.showLastNameError && <span className="errorMessage">{this.createErrorMessage('last name')}</span>}
+          <div className={`nameInputContainer ${this.state.lastNameClass}`}>
+            <label>Your last name</label> {this.state.showLastNameError && <span className="errorMessage">Required</span>}
             <input type="text" className="nameInput" label="lastName" onChange={e => this.setProperty('lastName', e)} />
           </div>
-          <div className="emailInputContainer">
-            <label>Your email</label> {this.state.showEmailerror && <span className="errorMessage">{this.createErrorMessage('valid email')}</span>}
+          <div className={`emailInputContainer ${this.state.emailClass}`}>
+            <label>Your email</label> {this.state.showEmailerror && <span className="errorMessage">A valid email is required</span>}
             <input type="text" className="emailInput" label="email" onChange={e => this.setProperty('email', e)} />
           </div>
           <button className="getStartedButton">GET STARTED</button>

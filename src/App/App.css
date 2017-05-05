@@ -6,3 +6,16 @@
   display: flex;
   flex-direction: column;
 }
+
+.warning {
+  color: red;
+}
+
+.warning .nameInput {
+  border-color: red;  
+  color: black;
+}
+.warning .emailInput {
+  border-color: red;  
+  color: black;
+}

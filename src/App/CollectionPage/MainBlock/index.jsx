@@ -4,13 +4,13 @@ import './MainBlock.css';
 const MainBlock = function (props) {
   return (
     <div className="mainBlock">
-      <h1>{props.title}</h1>
+      <div className="mainBlockTitle">{props.title}</div>
       <p>{props.blurbs && props.blurbs[0]}</p>
       <div className="mainBlockPictureContainer">
         <img src={props.pictureURL} className="mainBlockPicture" />
       </div>
       <p>{props.blurbs && props.blurbs[1]}</p>
-      <button>SEARCH ALL MILITARY RECORDS</button>
+      <button className="searchButton">SEARCH ALL MILITARY RECORDS</button>
     </div>
   );
 };

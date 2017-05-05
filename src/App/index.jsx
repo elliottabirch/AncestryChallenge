@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pageTitle: 'US Military Collection',
+      pageTitle: 'U.S. Military Collection',
       currentPath: ['Home', 'Search', 'US Military Collection'],
     };
   }

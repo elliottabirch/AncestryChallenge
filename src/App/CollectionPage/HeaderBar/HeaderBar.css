@@ -2,21 +2,36 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: #00c4ff;
+  background-color: #2284A8;
+  height: 85px;
+  color: white;
 }
 
 .pathContainer {
   display: flex;
   justify-content: flex-start;
+  font-size: 8px;
+
+}
+
+.pathContainer > * {
+  margin: 5px;
 }
 
 .pathStep {
-
+  display: flex;
+  justify-content: flex-start;
+}
+.carat {
+  margin-left: 10px
 }
 
 .headerBarTitleContainer {
   display: flex;
   justify-content: center;
+  flex: 1;
+  align-items: center;
+  font-size: 24px;
 }
 
 .headerBarTitle {

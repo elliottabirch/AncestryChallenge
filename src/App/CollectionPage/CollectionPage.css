@@ -9,3 +9,10 @@
   display: flex;
   width: 900px;
 }
+
+@media screen and (max-width: 930px) {
+  .content {
+    flex-direction: column;
+    width: 600px;
+  }
+}

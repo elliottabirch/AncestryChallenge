@@ -33,3 +33,9 @@ color: #36322D;
   padding: 8px;
   font-size: 10px;
 }
+
+@media screen and (max-width: 930px) {
+  .mainBlock {
+    margin: 0 5px;
+  }
+}

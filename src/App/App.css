@@ -19,3 +19,8 @@
   border-color: red;  
   color: black;
 }
+
+.a:hover {
+  color: #4D54E4;
+  text-decoration: underline;
+}

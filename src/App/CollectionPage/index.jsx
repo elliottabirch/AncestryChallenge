@@ -8,13 +8,16 @@ import CollectionBlock from './Blocks/CollectionBlock';
 import SubscribeForm from '../SubscribeForm';
 import Modal from '../Modal';
 
+
+const blurbs = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget quam dui. Mauris cursus mollis ligula, sed malesuada augue imperdiet ut. Suspendisse ullamcorper malesuada efficitur. Pellentesque quis libero eget ex tincidunt congue eget vel turpis. Etiam elementum, augue sed sollicitudin congue, nulla mauris vehicula ante, quis commodo orci massa nec sem. Maecenas non mollis eros.', 'Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis eu vulputate arcu. Quisque id dictum lorem. Quisque vel lectus nec elit aliquet blandit. Aliquam gravida quis tortor tempus luctus. '];
+
 class CollectionPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       sideBlocks: [],
       title: 'World Conflicts. Personal Stories',
-      blurbs: ['stuff1', 'stuff2'],
+      blurbs,
       collection: [
         'U.S. World War II Army Enlistmentment Records',
         'U.S. CIvil War Soldiers, 1861-1865',
@@ -23,7 +26,7 @@ class CollectionPage extends Component {
         'World War I Draft Registrtion Cards',
         'U.S. Marine Corps Muster ROlls, 1798-1958',
       ],
-      pictureURL: 'http://peacehistory-usfp.org/wp-content/uploads/2016/09/0_KoreanWarFallenSoldier1.jpg',
+      pictureURL: 'https://s-media-cache-ak0.pinimg.com/originals/f8/07/e3/f807e3103295f54341605e1e3b4419f5.jpg',
       subscribeBlockBody: "Begin your free family tree with a few simple facts. We'll help you discover a lot more. Start your tree by subscribing today for a free trial",
       modalIsShowing: false,
     };
@@ -56,3 +59,4 @@ class CollectionPage extends Component {
 }
 
 export default CollectionPage;
+

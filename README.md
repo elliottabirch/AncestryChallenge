@@ -2,8 +2,8 @@
 
 http://ancestrychallenge.herokuapp.com/
 
-It is responsive to large, medium, and small screens. 
-The form is validating, and is ready to recieve the logic to add a new user to a database
+  - It is responsive to large, medium, and small screens. 
+  - The form is validating, and is ready to recieve the logic to add a new user to a database
 
 Issues
 

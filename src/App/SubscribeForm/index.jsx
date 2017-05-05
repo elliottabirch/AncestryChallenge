@@ -65,17 +65,23 @@ class SubscribeForm extends Component {
 
   render() {
     return (
-      <div>
-        <form action="" onSubmit={e => this.submitNewUser(this.state.firstName, this.state.lastName, this.state.email, e)}>
-          {this.state.showFirstNameError && <div className="errorMessage">{this.createErrorMessage('first name')}</div>}
-          <input type="text" label="firstName" onChange={e => this.setProperty('firstName', e)} placeholder="Enter your First Name" />
-          {this.state.showLastNameError && <div className="errorMessage">{this.createErrorMessage('last name')}</div>}
-          <input type="text" label="lastName" onChange={e => this.setProperty('lastName', e)} placeholder="Enter your Last Name" />
-          {this.state.showEmailerror && <div className="errorMessage">{this.createErrorMessage('valid email')}</div>}
-          <input type="text" label="email" onChange={e => this.setProperty('email', e)} placeholder="Enter your E-Mail address" />
-          <button>GET STARTED</button>
+      <div className="subscribeFormContainer">
+        <form className="subscribeForm" action="" onSubmit={e => this.submitNewUser(this.state.firstName, this.state.lastName, this.state.email, e)}>
+          <div className="nameInputContainer">
+            <label>Your first name</label> {this.state.showFirstNameError && <span className="errorMessage">{this.createErrorMessage('first name')}</span>}
+            <input type="text" className="nameInput" label="firstName" onChange={e => this.setProperty('firstName', e)} />
+          </div>
+          <div className="nameInputContainer">
+            <label>Your last name</label> {this.state.showLastNameError && <span className="errorMessage">{this.createErrorMessage('last name')}</span>}
+            <input type="text" className="nameInput" label="lastName" onChange={e => this.setProperty('lastName', e)} />
+          </div>
+          <div className="emailInputContainer">
+            <label>Your email</label> {this.state.showEmailerror && <span className="errorMessage">{this.createErrorMessage('valid email')}</span>}
+            <input type="text" className="emailInput" label="email" onChange={e => this.setProperty('email', e)} />
+          </div>
+          <button className="getStartedButton">GET STARTED</button>
         </form>
-        <p className="disclaimer">By creating an account, you agree to <a>Ancestry Tems and Conditions</a> and understand that your information will be used in accordance with our <a>Privace Statement</a> including that we will send you emails about our service and special offers</p>
+        <p className="disclaimer">By creating an account, you agree to <a>Ancestry Tems and Conditions</a> and understand that your information will be used in accordance with our <a>Privace Statement</a>, including that we will send you emails about our service and special offers</p>
 
       </div>
 

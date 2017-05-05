@@ -1,0 +1,56 @@
+.disclaimer {
+  font-size: 8px;
+  color: #433D38;
+}
+
+.nameInput {
+width: 154px;
+
+}
+.nameInputContainer{
+width: 160px;
+margin: 5px 0;
+}
+
+.emailInput {
+width: 100%;
+}
+
+.emailInputContainer {
+  width: 320px;
+  margin: 5px 0
+}
+
+.subscribeFormContainer {
+  display:flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+.subscribeForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: #574D46;
+}
+
+.subscribeForm input{
+  height: 14px;
+  border-radius: 2px;
+  border-width: .1px;
+  border-color: #CCCCCC;
+  box-shadow: 0px 2px 0 #F3F3F3 inset;
+  border-style: solid;
+}
+
+.getStartedButton {
+  /* Rectangle: */
+background: #90D060;
+border-radius: 2px;
+border-width: 0;
+color: white;
+font-size: 8px;
+padding: 5px;
+margin-top: 5px;
+box-shadow: 0 1px 0 #67A243;
+}

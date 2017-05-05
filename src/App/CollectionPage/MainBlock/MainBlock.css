@@ -37,5 +37,6 @@ color: #36322D;
 @media screen and (max-width: 930px) {
   .mainBlock {
     margin: 0 5px;
+    margin-top: 10px;
   }
 }

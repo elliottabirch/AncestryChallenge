@@ -35,5 +35,13 @@
 } 
 
 @media screen and (max-width: 630) {
+    .sideBlockContainer {
+    flex-direction: row;
+  }
 
+  .sideBlockContainer > * {
+    margin: 0 5px;
+    justify-content: space between;
+    width: calc(100% - 10px)
+  }
 }
